@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ulearning/common/values/colors.dart';
 
 AppBar buildAppBar() {
   return AppBar(
@@ -119,7 +120,7 @@ Widget buildLoginAndRegisButton(
       width: MediaQuery.sizeOf(context).width,
       height: 50,
       decoration: BoxDecoration(
-          color: Colors.blue,
+          color:buttonName == "Login"? Colors.blue : AppColors.primaryBackground,
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
@@ -130,7 +131,7 @@ Widget buildLoginAndRegisButton(
           ]),
       child: Text(
         buttonName,
-        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15.h),
+        style: TextStyle(color:buttonName == "Login"? Colors.white : Colors.black, fontWeight: FontWeight.bold, fontSize: 15.h),
       ),
     ),
   );
